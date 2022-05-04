@@ -1,0 +1,51 @@
+.user-profile {
+  .inner-breadcrumbs {
+    padding-left: 0;
+
+    li {
+      a {
+        i {
+          display: inline-block;
+          margin-right: 6px;
+
+          img {
+            transform: rotate(180deg);
+            width: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  h4 {
+    color: $brand_red;
+
+    span {
+      color: $brand_graydark;
+    }
+  }
+
+  p {
+    color: rgba($brand_darkblue, 0.8);
+    margin: 20px 0;
+  }
+
+  .vol-img {
+    position: relative;
+
+    img {
+      width: 100%;
+      max-width: 224px;
+    }
+
+    .icon-mit {
+      position: absolute;
+      left: -10px;
+      bottom: -10px;
+
+      img {
+        width: auto;
+      }
+    }
+  }
+}

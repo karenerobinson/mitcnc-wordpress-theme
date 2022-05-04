@@ -1,0 +1,426 @@
+footer {
+  width: 100%;
+
+  @include respond-to(mobile) {
+    background-color: #fff;
+
+    .container {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+  .footer {
+    border-top: 2px solid $brand_red;
+    padding: 30px 0;
+    width: 100%;
+    background-image: url(../images/skyline.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+
+    .left-footer {
+      float: left;
+
+      img {
+        float: left;
+        filter: grayscale(100%) opacity(50%);
+        height: 42px;
+
+        @include transition($simple-trans);
+
+        @include respond-to(mobile) {
+          width: 100px;
+          margin: 0 auto;
+          vertical-align: middle;
+          position: absolute;
+          left: 0;
+          right: 0;
+        }
+
+        &:hover {
+          filter: none;
+        }
+      }
+
+      .footer-content {
+        float: left;
+        margin-left: 0;
+        margin-top: 10px;
+
+        @include respond-to(mobile) {
+          margin-top: 18px;
+          text-align: center;
+          padding-top: 70px;
+          width: 100%;
+        }
+
+        h5 {
+          margin: 0;
+          margin-bottom: 5px;
+
+          @extend %poppins-medium;
+        }
+
+        p {
+          color: $brand_gray16;
+
+          @include respond-to(mobile) {
+            padding: 0 50px;
+          }
+        }
+      }
+
+      @include respond-to(mobile) {
+        text-align: center;
+        width: 100%;
+      }
+    }
+
+    .right-footer {
+      @include respond-to(mobile) {
+        float: left;
+        width: 100%;
+      }
+
+      .social-area {
+        float: right;
+
+        @include respond-to(mobile) {
+          float: left;
+          width: 100%;
+          text-align: center;
+        }
+
+        h6 {
+          @include font-size(14);
+
+          @extend %poppins-medium;
+
+          color: rgba($brand_black, 1);
+          text-transform: capitalize;
+          margin-top: 9px;
+          margin-right: 15px;
+          margin-bottom: 5px;
+
+          @include respond-to(mobile) {
+            width: 100%;
+            text-align: center;
+          }
+        }
+
+        ul {
+          float: left;
+          margin-right: 8px;
+          position: relative;
+          left: -5px;
+
+          @include respond-to(mobile) {
+            width: 100%;
+          }
+
+          li {
+            display: inline-block;
+
+            a {
+              display: block;
+              padding: 3px 12px;
+
+              img {
+                @include transition(all ease 0.3s);
+
+                filter: grayscale(100%) brightness(50%) opacity(50%);
+              }
+
+              &:hover {
+                img {
+                  filter: none;
+                }
+              }
+            }
+          }
+        }
+
+        .donate-btn {
+          display: inline-block;
+          padding: 3px 25px;
+          background-color: $brand_red;
+          color: $brand_white;
+          text-align: center;
+          border-radius: 30px;
+          margin-top: 10px;
+          border: 1px solid $brand_red;
+          text-decoration: none;
+
+          &:hover {
+            background-color: transparent;
+            color: $brand_red;
+          }
+        }
+      }
+
+      .footer-links {
+        width: 100%;
+        float: left;
+        text-align: left;
+        border-top: 2px solid $brand_gray6;
+        padding-top: 15px;
+
+        ul {
+          @include respond-to(mobile) {
+            text-align: left;
+          }
+
+          li {
+            display: block;
+
+            @include respond-to(mobile) {
+              display: block;
+              text-align: center;
+            }
+
+            a {
+              display: block;
+              padding: 0 15px;
+
+              @extend %poppins-medium;
+
+              color: rgba($brand_black, 0.5);
+              padding-left: 0;
+
+              @include respond-to(mobile) {
+                border-right: none;
+              }
+            }
+
+            &:last-child {
+              margin-top: 25px;
+
+              @include respond-to(mobile) {
+                margin-top: 15px;
+              }
+
+              a {
+                border-right: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.ibex-logo {
+  text-decoration: none;
+
+  img {
+    @include transition($simple-trans);
+
+    filter: brightness(0);
+    opacity: 0.3;
+    width: 60px;
+  }
+
+  &:hover {
+    text-decoration: none;
+
+    img {
+      filter: brightness(1);
+      opacity: 1;
+    }
+  }
+
+  &.mit-logo {
+    position: relative;
+    left: -10px;
+    text-decoration: none;
+
+    img {
+      height: 30px;
+    }
+  }
+}
+
+.footer-menu-container {
+  ul {
+    li {
+      display: block;
+
+      a {
+        display: block;
+        padding: 10px;
+        border-bottom: 1px solid $brand_gray6;
+        color: $brand_black;
+        text-decoration: none;
+        position: relative;
+        text-transform: uppercase;
+
+        @include transition(all ease 0.3s);
+
+        &::after {
+          content: '';
+          background: url(../images/down-arrow.svg) no-repeat 0 0;
+          background-size: cover;
+          height: 12px;
+          width: 12px;
+          right: 10px;
+          transform: rotate(-90deg);
+          position: absolute;
+          top: 15px;
+
+          @include transition(all ease 0.3s);
+        }
+
+        &:hover {
+          color: $brand_red;
+          border-bottom: 1px solid $brand_red;
+
+          &::after {
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  @include respond-to(mobile) {
+    display: none;
+  }
+}
+
+.footer-program-menu {
+  ul {
+    li {
+      display: block;
+
+      a {
+        color: $brand_gray15;
+        padding: 5px;
+        display: block;
+        position: relative;
+        padding-left: 15px;
+        text-decoration: none;
+
+        &::after {
+          content: '';
+          height: 4px;
+          width: 4px;
+          left: 0;
+          background-color: $brand_gray15;
+          border-radius: 50%;
+          position: absolute;
+          top: 15px;
+
+          @include transition(all ease 0.3s);
+        }
+
+        &:hover {
+          color: $brand_red;
+
+          &::after {
+            background-color: $brand_red;
+          }
+        }
+      }
+    }
+  }
+
+  @include respond-to(mobile) {
+    display: none;
+  }
+}
+
+.footer-logo {
+  text-align: right;
+  padding-right: 15px;
+
+  @include respond-to(tablet) {
+    padding-right: 0;
+  }
+
+  @include respond-to(mobile) {
+    text-align: center;
+  }
+}
+
+.copy-right {
+  @include font-size(13);
+}
+
+.footer-bottom {
+  border-top: 2px solid $brand_gray6;
+  padding: 33px 0;
+  float: left;
+  width: 100%;
+
+  .copy-right {
+    margin-bottom: 0;
+    float: left;
+    color: rgba($brand_black, 0.5);
+    line-height: 1.7;
+    padding-right: 15px;
+
+    @include respond-to(mobile) {
+      width: 100%;
+      text-align: center;
+      padding-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    float: left;
+
+    @include respond-to(mobile) {
+      width: 100%;
+      text-align: center;
+    }
+
+    li {
+      display: inline-block;
+
+      a {
+        color: rgba($brand_black, 0.5);
+
+        @include font-size(12);
+
+        padding: 0 15px;
+        border-left: 1px solid $brand_gray3;
+        text-decoration: none;
+
+        @include respond-to(mobile) {
+          border-left: none;
+        }
+
+        &:hover {
+          color: $brand_red;
+        }
+      }
+    }
+  }
+
+  .ibex-logo {
+    text-decoration: none;
+    float: right;
+    position: relative;
+    top: -1px;
+
+    @include respond-to(mobile) {
+      float: left;
+      text-align: center;
+      width: 100%;
+      margin-top: 20px;
+      top: 0;
+    }
+  }
+}
+
+.post-id-5085 {
+  footer {
+    .footer {
+      border-top: 2px solid #6855ff !important;
+    }
+  }
+}

@@ -1,0 +1,122 @@
+.puzzle-box {
+  @include transition(all 0.3s ease-in-out);
+
+  text-decoration: none;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 3.746px 9.272px 25px 0 rgba(2, 2, 2, 0);
+  border-radius: 0.25rem;
+  background-color: transparent;
+  height: 427px;
+
+  .img-container {
+    background-color: $brand_graylighter;
+    border-radius: 0.25rem;
+    text-align: center;
+    padding: 10px;
+    height: 197px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .content-btn {
+    p {
+      color: $brand_gray16;
+
+      @include font-size(16);
+
+      margin: 22px 0;
+    }
+
+    a {
+      width: 100%;
+      opacity: 0;
+
+      @include transition(all 0.3s ease-in-out);
+    }
+  }
+
+  &:hover {
+    box-shadow: 3.746px 9.272px 25px 0 rgba(2, 2, 2, 0.07);
+    background-color: $brand_white;
+
+    .content-btn {
+      a {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.ans-list {
+  list-style: none outside none;
+  padding: 0 !important;
+  margin: 40px 20px;
+
+  li {
+    border-left: 2px solid $brand_gray7;
+    padding: 6px 0 6px 14px !important;
+    display: inline-block;
+    width: 33%;
+    margin-bottom: 40px;
+
+    @include respond-to(tablet) {
+      width: 45%;
+    }
+
+    @include respond-to(mobile) {
+      width: 100%;
+    }
+
+    span {
+      span {
+        display: block;
+      }
+
+      &.ques-power {
+        display: block;
+      }
+    }
+
+    .name {
+      color: $brand_red;
+
+      @include font-size(18);
+
+      @extend %poppins-semibold;
+    }
+  }
+
+  @include respond-to(mobileportrait) {
+    li {
+      width: 100%;
+      margin-right: 0;
+
+      &:last-child {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+.ques-power {
+  color: $brand_gray9;
+}
+
+.puzzle-image {
+  background: $brand_white;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.answer-box {
+  width: 100%;
+  display: none;
+}

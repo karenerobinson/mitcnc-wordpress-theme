@@ -1,0 +1,140 @@
+@mixin font-size($fontSize: 14) {
+  font-size: $fontSize + px;
+  font-size: ($fontSize / $baseFontSize) + rem;
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin box-shadow($params) {
+  -webkit-box-shadow: $params;
+  -moz-box-shadow: $params;
+  box-shadow: $params;
+}
+
+@mixin placeholder {
+  ::-webkit-input-placeholder { @content; }
+  :-moz-placeholder { @content; }
+  ::-moz-placeholder { @content; }
+  :-ms-input-placeholder { @content; }
+}
+
+@mixin transition($errortransition) {
+  -moz-transition: $errortransition;
+  -ms-transition: $errortransition;
+  -webkit-transition: $errortransition;
+  transition: $errortransition;
+}
+
+$simple-trans: all 0.5s ease;
+
+@mixin caret($size: 3px, $color: #ccc, $direction: "down") {
+  width: 0;
+  height: 0;
+
+  @if $direction == "down" {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-top: $size solid $color;
+  }
+
+  @else if $direction == "up" {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-bottom: $size solid $color;
+  }
+
+  @else if $direction == "left" {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-right: $size solid $color;
+  }
+
+  @else if $direction == "right" {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-left: $size solid $color;
+  }
+}
+
+@mixin respond-to($media) {
+  @if $media == handhelds {
+    @media only screen and (max-width: 320px) { @content; }
+  }
+
+  @if $media == handHeldsLg {
+    @media only screen and (max-width: 360px) { @content; }
+  }
+
+  @if $media == mobileportrait {
+    @media only screen and (max-width: 480px) { @content; }
+  }
+
+  @if $media == shortTablet {
+    @media only screen and (max-width: 575px) { @content; }
+  }
+
+  @else if $media == mobilelandscape {
+    @media only screen and (min-width: 576px) { @content; }
+  }
+
+  @else if $media == laptop {
+    @media only screen and (max-width: 601px) { @content; }
+  }
+
+  @else if $media == mobile {
+    @media only screen and (max-width: 767px) { @content; }
+  }
+
+  @else if $media == btwTablets {
+    @media (min-width: 768px) and (max-width: 991px) { @content; }
+  }
+
+  @else if $media == tablet {
+    @media only screen and (max-width: 1199px) { @content; }
+  }
+
+  @else if $media == tabletlandscape {
+    @media only screen and (max-width: 1024px) { @content; }
+  }
+
+  @else if $media == desktopscreens {
+    @media only screen and (min-width: 1024px) { @content; }
+  }
+
+  @else if $media == lpscreens {
+    @media only screen and (max-width: 1224px) { @content; }
+  }
+
+  @else if $media == large {
+    @media only screen and (min-width: 1920px) { @content; }
+  }
+}
+
+@mixin gradient-horizontal-img($start-color: #555, $end-color: #333, $start-percent: 0%, $end-percent: 100%) {
+  background-image: -webkit-linear-gradient(left, $start-color $start-percent, $end-color $end-percent); // Safari 5.1-6, Chrome 10+
+  background-image: -o-linear-gradient(left, $start-color $start-percent, $end-color $end-percent); // Opera 12
+  background-image: linear-gradient(to top, $start-color $start-percent, $end-color $end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+  background-repeat: repeat-x;
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=1); // IE9 and down
+}
+
+@mixin gradient-horizontal-right($start-color: #555, $end-color: #333, $start-percent: 0%, $end-percent: 100%) {
+  background-image: -webkit-linear-gradient(left, $start-color $start-percent, $end-color $end-percent); // Safari 5.1-6, Chrome 10+
+  background-image: -o-linear-gradient(left, $start-color $start-percent, $end-color $end-percent); // Opera 12
+  background-image: linear-gradient(to left top, $start-color $start-percent, $end-color $end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+  background-repeat: repeat-x;
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=1); // IE9 and down
+}

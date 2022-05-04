@@ -1,0 +1,28 @@
+/* ibex mobile. */
+
+$grid-columns: 24;
+$grid-gutter-width: 16px;
+
+@import "bootstrap/bootstrap";
+
+// Base
+@import "base/mixins";
+@import "base/variables";
+@import "base/common";
+
+// Layout
+@import "layout/layout";
+
+// Components
+@import "components/header";
+@import "components/footer";
+@import "components/buttons";
+@import "components/slick";
+
+// Pages
+@import "pages/home";
+@import "pages/profile-page";
+@import "pages/event-page";
+@import "pages/puzzle-page";
+@import "pages/soltlight-page";
+@import "pages/my-membership";

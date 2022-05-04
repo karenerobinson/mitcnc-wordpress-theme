@@ -1,0 +1,35 @@
+.spotlight-banner {
+  max-height: 445px;
+  overflow: hidden;
+  border-radius: 0.25rem;
+
+  img {
+    width: 100%;
+  }
+}
+
+.spotlight-gallery {
+  .photonic-standard-layout {
+    li {
+      &.photonic-gallery-3c {
+        width: 47%;
+
+        @include respond-to(mobile) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.page-template-templates-spotlight {
+  @include respond-to(mobile) {
+    .img-responsive {
+      margin-top: 20px !important;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

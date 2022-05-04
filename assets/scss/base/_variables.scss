@@ -1,0 +1,123 @@
+$baseFontSize:	14;
+$basePath:	"../images" !default;
+
+// Colors
+$brand_body:    #03001a;
+$brand_black:   #000;
+$brand_white:   #fff;
+$brand_gray:    #ededed;
+$brand_graylight: #f5f5f5;
+$brand_red:     #a31f34;
+$brand_red1:    #e74c3c;
+$brand_red2:    #d31f35;
+$brand_purple:  #ac49ff;
+$brand_green:  #30b630;
+$brand_darkblue:  #25242b;
+$brand_graydark:  #626262;
+$brand_graylighter:  #e1e1e1;
+$brand_gray1:  #73777a;
+$brand_gray2:  #5b5b5b;
+$brand_gray3:  #cdcdcd;
+$brand_gray4:  #f7f7f7;
+$brand_gray5:  #161616;
+$brand_gray6:  #e5e5e5;
+$brand_gray7:  #8a8a8a;
+$brand_gray8:  #ececec;
+$brand_gray9:  #b7b7b7;
+$brand_gray10:  #000;
+$brand_gray11:  #888;
+$brand_gray12:  #e6e6e6;
+$brand_gray13:  #999898;
+$brand_gray14:  #a3a3a3;
+$brand_gray14:  #a3a3a3;
+$brand_gray15:  #555;
+$brand_gray16:  #333;
+$brand_gray17:  #999;
+$brand_gray18:  #ccc;
+$brand_yellow:  #ff8a00;
+$brand_blue:  #4267b2;
+$brand_link: #81a6fb;
+$brand_gray_bg: #fafafa;
+$brand_blue_dard: #2e5ecc;
+$brand_ai_blue : #6855ff;
+$brand_purple2:  #6c61ab;
+
+// Fonts
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900');
+
+%poppins-light {
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 300;
+}
+
+%poppins-regular {
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
+}
+
+%poppins-medium {
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 500;
+}
+
+%poppins-semibold {
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 600;
+}
+
+%poppins-bold {
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: apercu-regular;
+  src: url(../fonts/apercu_regular.eot);
+  src:
+    url(../fonts/apercu_regular.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/apercu_regular.woff) format('woff'),
+    url(../fonts/apercu_regular.ttf) format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: apercu-medium;
+  src: url(../fonts/apercu_medium.eot);
+  src:
+    url(../fonts/apercu_medium.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/apercu_medium.woff) format('woff'),
+    url(../fonts/apercu_medium.ttf) format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: apercu-bold;
+  src: url(../fonts/apercu_bold.eot);
+  src:
+    url(../fonts/apercu_bold.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/apercu_bold.woff2) format('woff2'),
+    url(../fonts/apercu_bold.woff) format('woff'),
+    url(../fonts/apercu_bold.ttf) format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: apercu-mono-bold-pro;
+  src: url(../fonts/apercu-mono-bold-pro.eot);
+  src:
+    url(../fonts/apercu-mono-bold-pro.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/apercu-mono-bold-pro.woff2) format('woff2'),
+    url(../fonts/apercu-mono-bold-pro.woff) format('woff'),
+    url(../fonts/apercu-mono-bold-pro.ttf) format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}

@@ -1,0 +1,252 @@
+.default-btn {
+  min-width: 205px;
+  padding: 14px 20px;
+  background-color: $brand_green;
+  border: 1px solid $brand_green;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: $brand_white;
+  display: inline-block;
+  position: relative;
+
+  &:disabled {
+    opacity: 0.75;
+  }
+
+  @include font-size(14);
+
+  letter-spacing: 2px;
+  border-radius: 2px;
+
+  img {
+    height: 12px;
+    position: relative;
+    left: 6px;
+    top: -1px;
+
+    @include transition(all ease 0.3s);
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $brand_white;
+
+    img {
+      left: 17px;
+    }
+  }
+
+  &.red-btn {
+    background-color: $brand_red;
+    border: 1px solid $brand_red;
+    text-transform: capitalize;
+  }
+
+  &.red-btn-border {
+    background-color: transparent;
+    border: 1px solid $brand_red;
+    text-transform: capitalize;
+    color: $brand_red;
+  }
+
+  &.registration-btn {
+    min-width: auto;
+    background-color: $brand_red;
+    border: 1px solid $brand_red;
+    margin: 0 auto;
+    padding: 14px 25px;
+    width: 274px;
+    display: block;
+    text-decoration: none;
+
+    &:hover {
+      color: $brand_white;
+    }
+  }
+
+  &.gray-btn {
+    border: 1px solid $brand_gray15 !important;
+    background-color: $brand_gray15 !important;
+  }
+
+  &.download-btn {
+    border: 1px solid $brand_white;
+    border-radius: 3px;
+    color: $brand_white;
+    background-color: transparent;
+    padding: 10px 40px;
+    text-align: left;
+
+    .icon {
+      width: 12px;
+      display: inline-block;
+      position: absolute;
+
+      img {
+        width: 100%;
+        left: 4px;
+
+        @include transition(all 0.3s ease-in-out);
+      }
+    }
+
+    &:hover {
+      .icon {
+        img {
+          left: 8px;
+        }
+      }
+    }
+  }
+}
+
+.view-btn {
+  @include font-size(12);
+
+  text-decoration: none;
+
+  img {
+    height: 12px;
+    position: relative;
+    left: 10px;
+    display: inline-block !important;
+
+    @include transition(all ease 0.3s);
+  }
+
+  &:hover {
+    color: $brand_white;
+
+    img {
+      left: 15px;
+    }
+  }
+
+  &.white {
+    color: $brand_white;
+  }
+
+  &.gray {
+    color: $brand_darkblue;
+  }
+
+  &.black {
+    color: $brand_black;
+
+    @include font-size(14);
+  }
+}
+
+.big-green-btn {
+  position: relative;
+  padding: 40px;
+  background-color: $brand_green;
+  display: block;
+
+  h4 {
+    font-weight: normal;
+    color: $brand_white;
+    margin-top: 0;
+    margin-bottom: 10px;
+
+    @include font-size(22);
+  }
+
+  p {
+    color: $brand_white;
+  }
+
+  .icon {
+    width: 18px;
+    display: inline-block;
+    position: absolute;
+    right: 40px;
+    top: 70px;
+
+    img {
+      position: relative;
+      width: 100%;
+      left: 4px;
+
+      @include transition(all 0.3s ease-in-out);
+    }
+  }
+
+  &:hover {
+    text-decoration: none;
+
+    .icon {
+      img {
+        left: 8px;
+      }
+    }
+  }
+}
+
+.big-btn {
+  background-color: $brand_white;
+
+  @include box-shadow(0 10px 25px 0 rgba(2, 2, 2, 0.07));
+
+  display: inline-block;
+
+  a {
+    color: $brand_red;
+
+    @include font-size(22);
+
+    @extend %poppins-medium;
+
+    text-decoration: none;
+    padding: 40px;
+    display: block;
+    position: relative;
+
+    span {
+      color: $brand_gray5;
+      display: block;
+
+      @include font-size(14);
+
+      @extend %poppins-regular;
+    }
+
+    img {
+      position: absolute;
+      top: 79px;
+      right: 94px;
+
+      @include transition(all ease 0.3s);
+    }
+
+    &:hover {
+      img {
+        right: 83px;
+      }
+    }
+  }
+}
+
+.back-btn {
+  color: $brand_gray16;
+
+  img {
+    transform: rotate(180deg);
+    height: 12px;
+    padding-left: 10px;
+  }
+
+  &:hover {
+    color: $brand_gray16;
+  }
+}
+
+.cancel-btn {
+  float: right;
+
+  img {
+    height: 20px;
+  }
+}

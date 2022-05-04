@@ -1,0 +1,19 @@
+.stripe-checkout-form {
+  .stripe-checkout-price-table {
+    margin-bottom: 20px;
+
+    td {
+      input {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .stripe-checkout-button {
+    cursor: pointer;
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+  }
+}
